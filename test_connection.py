@@ -1,3 +1,25 @@
+"""
+Snowflake Connection Script
+
+Purpose:
+--------
+Connects to Snowflake using RSA Key-Pair Authentication.
+
+Responsibilities:
+-----------------
+1. Load environment variables.
+2. Read the private key.
+3. Authenticate with Snowflake.
+4. Establish a connection.
+5. Validate connectivity.
+6. Close the connection.
+
+Used For:
+---------
+- Snowflake connection testing
+- Authentication validation
+"""
+
 from dotenv import load_dotenv
 import os
 
