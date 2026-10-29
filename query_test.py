@@ -1,3 +1,45 @@
+"""
+Snowflake Metadata Retrieval Script
+
+Purpose:
+--------
+Establishes a secure connection to Snowflake using RSA Key-Pair Authentication
+and retrieves metadata about accessible databases and tables.
+
+Responsibilities:
+-----------------
+1. Load environment variables from .env.
+2. Read and process the RSA private key.
+3. Authenticate with Snowflake using key-pair authentication.
+4. Retrieve all accessible databases.
+5. Count the number of tables in each database.
+6. Display database and table count information.
+7. Close Snowflake resources after execution.
+
+Authentication:
+---------------
+Uses RSA Key-Pair Authentication (Public Key registered in Snowflake and
+Private Key stored on the local machine).
+
+Input:
+------
+- .env configuration file
+- rsa_key.p8 (Private Key)
+
+Output:
+-------
+- Total number of databases
+- Database names
+- Table counts for each database
+
+Used For:
+---------
+- Snowflake connectivity validation
+- Metadata retrieval
+- Environment verification
+- Authentication testing
+"""
+
 from dotenv import load_dotenv
 import os
 import snowflake.connector
