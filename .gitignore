@@ -1,0 +1,10 @@
+venv313/
+
+.env
+
+*.pem
+*.p8
+*.pub
+
+__pycache__/
+*.pyc
